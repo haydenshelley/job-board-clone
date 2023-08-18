@@ -1,4 +1,4 @@
-<% jobs = @company.jobs %>
+<% jobs = @company.jobs.where(active: true) %>
 
 <h1><%= @company.name%></h1>
 <h2>Current Jobs<h2>
