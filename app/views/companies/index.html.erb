@@ -1,0 +1,8 @@
+<h1>Companies</h1>
+<% @companies.each do |company| %>
+  <h2><%= company.name %></h2>
+  <img src="<%= company.logo %>">
+  <p>About Us: <%= company.description.capitalize %></p>
+<% end %>
+<a href="/login">Log In</a>
+<a href="/signup">Sign Up</a>
