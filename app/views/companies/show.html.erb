@@ -1,3 +1,9 @@
+<% jobs = @company.jobs %>
+
 <h1><%= @company.name%></h1>
 <h2>Current Jobs<h2>
+<% jobs.each do |job| %>
+  <a href="/jobs/<%= job.id %>"><%= job.title %></a>
+  <hr>
+<% end %>
 <a href="/companies">Back to all companies</a>
