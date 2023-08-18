@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :jobs
+
   get "/signup" => "users#new"
   post "/users" => "users#create"
 
