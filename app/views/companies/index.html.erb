@@ -1,8 +1,14 @@
 <h1>Companies</h1>
 <% @companies.each do |company| %>
+  <% jobs = company.jobs.where(active: true) %>
   <h2><%= company.name %></h2>
   <img src="<%= company.logo %>">
   <p>About Us: <%= company.description.capitalize %></p>
-  <a href="/companies/<%= company.id %>">More info</a>
-  <hr>
+  <% if jobs.length <  1 %>
+    <h1>No current job postings</h1>
+  <% elsif jobs.length == 1 %>
+    <a href="/companies/<%= company.id %>">1 job posting</a>
+  <% elsif jobs.length > 1 %>
+    <a href="/companies/<%= company.id %>"><%= company.jobs.length %> job postings</a>
+  <% end %>
 <% end %>
