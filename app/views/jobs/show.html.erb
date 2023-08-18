@@ -7,5 +7,5 @@
 <p>location: <%= @job.location %></p>
 <p>salary_range: <%= @job.salary_range %></p>
 <a href="/jobs">Back to all jobs</a>
-<%= link_to "Edit job", edit_jobs_path(@job) %>
+<%= link_to "Edit job", edit_job_path(@job) %>
 <%= link_to "Destroy job", job_path(@job), data: {turbo_method: :delete} %>
