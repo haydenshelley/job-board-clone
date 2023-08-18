@@ -1,0 +1,4 @@
+id,name,email,password_digest,created_at,updated_at
+1,Ricky,ricky@gmail.com,$2a$12$y40YRP/Toi2QFzw7a5MrUO/EIecQurB1Ngy/ib89pjJr7EaZlW0Em,2023-08-17 18:53:06.141078,2023-08-17 18:53:06.141078
+2,Hayden,hayden@gmail.com,$2a$12$Aqweki1OfIHKO.FD1p8HcOI46Qjhc9jUtaeLGyJJMui/wRG6V7Ena,2023-08-17 18:53:59.744181,2023-08-17 18:53:59.744181
+3,Jacob,jacob@gmail.com,$2a$12$L0Ue4b24m89tQBWXJgxqDeEtQoji8bi3lOJXY4NuT5ii/gbeK706O,2023-08-17 18:54:14.3939,2023-08-17 18:54:14.3939

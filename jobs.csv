@@ -1,0 +1,4 @@
+id,company_id,title,description,url,location,active,salary_range,created_at,updated_at
+1,1,QA,does stuff,https://www.indeed.com/jobs?q=QA&l=Los+Angeles%2C+CA&from=mobRdr&utm_source=%2Fm%2F&utm_medium=redir&utm_campaign=dt&vjk=36c8d473c3013c85,San Jose  CA,TRUE,80_000 - 100_000,2023-08-17 19:13:26.016053,2023-08-17 19:13:26.016053
+2,1,Programmer,programs things,https://careers.insidehighered.com/job/2956989/software-programmer/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic,Los Angeles  CA,TRUE,100_000 - 120_000,2023-08-17 19:16:19.302683,2023-08-17 19:16:19.302683
+3,2,CFO,bosses people around,https://jobs.cedars-sinai.edu/job/los-angeles/associate-cfo-acfo/252/35755422672?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic,Los Angeles  CA,TRUE,200_000 - 250_000,2023-08-17 19:16:19.31564,2023-08-17 19:16:19.31564
