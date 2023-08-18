@@ -1,0 +1,10 @@
+<h1>All jobs</h1>
+<% @jobs.each do |job| %>
+  <h2><%= job.title %></h2>
+  <p>company_id: <%= job.company_id %></p>
+  <p>title: <%= job.title %></p>
+  <p>description: <%= job.description %></p>
+  <p>url: <%= job.url %></p>
+  <p>location: <%= job.location %></p>
+  <p>salary_range: <%= job.salary_range %></p>
+<% end %>
