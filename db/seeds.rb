@@ -38,7 +38,7 @@ while i < company.length
   i += 1
 end
 
-job = CSV.ready("jobs.csv")
+job = CSV.read("jobs.csv")
 i = 1
 while i < job.length
   Job.create(
