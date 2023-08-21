@@ -1,4 +1,6 @@
 class TagsController < ApplicationController
+  before_action :authenticate_admin, only: [:create, :update, :destroy]
+
   def index
     @tags = Tag.all
   end
@@ -14,9 +16,16 @@ class TagsController < ApplicationController
 
   def update
     @tag = Tag.find_by(id: params[:id])
-    @Tag.update(
+    @tag.update(
       name: params[:tag][:name],
     )
     redirect_to "/tags"
   end
+
+  def destroy
+    @tag = Tag.find_by(id: params[:id])
+    @tag.destroy
+    redirect_to "/tags", status: :see_other
+  end
+
 end
