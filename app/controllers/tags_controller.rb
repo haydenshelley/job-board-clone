@@ -16,7 +16,7 @@ class TagsController < ApplicationController
 
   def create
     @tag = Tag.create(
-     name: params[:tag][:name])
+    name: params[:tag][:name])
     redirect_to "/tags"
   end
     
