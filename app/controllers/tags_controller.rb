@@ -8,7 +8,18 @@ class TagsController < ApplicationController
   def show
     @tag = Tag.find_by(id: params[:id])
   end
+  
+  def new
+    @tag = Tag.new
+    render :new
+  end
 
+  def create
+    @tag = Tag.create(
+     name: params[:tag][:name])
+    redirect_to "/tags"
+  end
+    
   def edit
     @tag = Tag.find_by(id: params[:id])
     render :edit
@@ -20,6 +31,7 @@ class TagsController < ApplicationController
       name: params[:tag][:name],
     )
     redirect_to "/tags"
+
   end
 
   def destroy
