@@ -6,4 +6,9 @@
   <a href="/jobs/<%= job.id %>"><%= job.title %></a>
   <hr>
 <% end %>
+<% if current_user.admin %>
+  <a href="/companies/<%= @company.id %>/edit">Edit</a>
+  <a href="/companies/<%= @company.id %>" data-turbo-method="delete">Delete</a>
+<% end %>
+<br>
 <a href="/companies">Back to all companies</a>

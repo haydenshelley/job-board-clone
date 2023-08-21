@@ -1,0 +1,19 @@
+<h1>New Company</h1>
+<form method="post" action="/companies">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <div>
+    <label>Name </label>
+    <input type="text" name="company[name]">
+  </div>
+  <div>
+    <label>Logo </label>
+    <input type="text" name="company[logo]">
+  </div>
+  <div>
+    <label>Description </label>
+    <input type="text" name="company[description]">
+  </div>
+  <div>
+    <input type="submit" value="Create company">
+  </div>
+</form>
