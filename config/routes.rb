@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :companies
   resources :jobs
   resources :tags
+  resources :job_tags
 
   get"/home" => "home#index"
 
