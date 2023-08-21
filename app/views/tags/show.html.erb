@@ -5,3 +5,5 @@
 <% jobs.each do |job| %>
   <h2><%= job.title %></h2>
 <% end %>
+
+<%= link_to "Edit tag", edit_tag_path(@tag) %>
