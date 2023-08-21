@@ -18,7 +18,7 @@ class TagsController < ApplicationController
     @tag = Tag.create(
      name: params[:tag][:name])
     redirect_to "/tags"
-    end
+  end
     
   def edit
     @tag = Tag.find_by(id: params[:id])

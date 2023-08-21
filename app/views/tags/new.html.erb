@@ -1,8 +1,11 @@
-<%= form_with model: @tags do |form| %>
+<h1>New Tag</h1>
+<%= form_with model: @tag do |form| %>
   <div>
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
+  
+  <div>
     <%= form.submit %>
   </div>
 <% end%>
