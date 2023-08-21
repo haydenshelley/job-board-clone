@@ -1,3 +1,5 @@
+<% jts = @job.tags %>
+
 <h1>Job info</h1>
 <br>
 <h2><%= @job.title %></h2>
@@ -6,9 +8,17 @@
 <p>Salary Range: <%= @job.salary_range %></p>
 <p>Description: <%= @job.description %></p>
 <p>URL: <%= @job.url %></p>
+
+<p> Tags: <% jts.each do |jt| %>
+  <%= jt.name %>
+<% end %>
+<p>
+
 <a href="/jobs">Back to all jobs</a>
 
 <% if current_user.admin %>
   <%= link_to "Edit", edit_job_path(@job) %>
   <%= link_to "Delete", job_path(@job), data: {turbo_method: :delete} %>
 <% end %>
+
+<a href="/job_tags/new">New tag</a>
