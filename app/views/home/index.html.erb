@@ -1,0 +1,29 @@
+<% time = Time.new%>
+<% if time.hour >= 4 && time.hour <= 12 %>
+  <% time_of_day = "morning" %>
+<% elsif time.hour > 12 && time.hour <= 18%>
+  <% time_of_day = "afternoon" %>
+<% else %>
+  <% time_of_day = "evening" %>
+<% end %>
+
+<h1>Site Name Here</h1>
+<% if current_user %>
+  <h2>Good <%= time_of_day %>, <%= current_user.name.capitalize%><h2>
+<% else %>
+  <h2>Please sign up or log in to view jobs</h2>
+<% end %>
+
+<% if current_user %>
+  <a href="/companies">Jobs By Company</a>
+  <a href="">Jobs by Tag</a>
+  <a href="/jobs">All Jobs</a>
+<% end %>
+
+<br>
+<% if current_user %>
+  <a href="/logout">Log Out</a>
+<% else %>
+  <a href="/login">Log In</a> 
+  <a href="/signup">Sign Up</a>
+<% end %>

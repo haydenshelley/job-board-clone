@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  root "companies#index"
+  root "home#index"
   resources :companies
-
   resources :jobs
 
+  get"/home" => "home#index"
 
   get "/signup" => "users#new"
   post "/users" => "users#create"
