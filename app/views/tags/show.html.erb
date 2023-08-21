@@ -3,7 +3,8 @@
 <h1><%= @tag.name %> Jobs</h1>
 
 <% jobs.each do |job| %>
-  <h2><%= job.title %></h2>
+  <a href="/jobs/<%= job.id %>"><%= job.title %></a>
+  <hr>
 <% end %>
 
 <% if current_user.admin %>
