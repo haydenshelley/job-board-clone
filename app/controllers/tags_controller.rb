@@ -14,7 +14,7 @@ class TagsController < ApplicationController
 
   def update
     @tag = Tag.find_by(id: params[:id])
-    @Tag.update(
+    @tag.update(
       name: params[:tag][:name],
     )
     redirect_to "/tags"
