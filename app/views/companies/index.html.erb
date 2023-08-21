@@ -1,8 +1,9 @@
+<div class="companies">
 <h1>Companies</h1>
 <% @companies.each do |company| %>
   <% jobs = company.jobs.where(active: true) %>
   <h2><%= company.name %></h2>
-  <img src="<%= company.logo %>">
+  <img src="<%= company.logo %>" class="logo">
   <p>About Us: <%= company.description.capitalize %></p>
   <% if jobs.length <  1 %>
     <a href="/companies/<%= company.id %>">No current job postings</a>
@@ -16,4 +17,4 @@
 <% if current_user.admin %>
   <a href="/companies/new">New Company</a>
 <% end %>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</div>
